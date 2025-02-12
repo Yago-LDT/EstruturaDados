@@ -67,5 +67,62 @@ If(n1 % 2 == 0'){
 
 07) "Como funciona a estrutura switch-case? Em quais situações ela pode ser mais adequada que o uso de múl plos if/else?"
 
-Na estrutura switch/case, se passa uma variável como parâmetro na estrutura do código. 
+Na estrutura switch/case, se passa uma variável como parâmetro na estrutura do código. De acordo com o dado específico que foi inserido na variável desse parâmetro, podem ser criados "casos" onde um bloco de código é executado invés de outro. 
+
+Exemplo: Imagine uma tela que oferece múltiplas escolhas de acordo com o número que o usuário atribui na variável numero.
+
+int numero;
+numero = 3;
+
+switch(numero){
+
+  case 1:
+
+//bloco do código para o caso 1
+
+  break;
+
+case 2: 
+
+//bloco de código para o caso 2
+
+break;
+
+case 3: 
+
+//bloco de código para o caso 3
+
+break;
+
+}
+
+É mais adequado do que if/else em situações onde queremos desenvolver código para cada resultado específico, invés de só quando um uma condição é verdadeira ou falsa, dessa forma podemos ser mais específicos com o nosso código e não generalizar.
+
+08) "Descreva as diferenças entre os laços for, while e do-while, e dê um exemplo de cada um"
+
+No laço For, inicializamos a variável, fazemos o teste lógico e a incrementação da variável na mesma linha de código.
+
+For (int c = 1; c <= 10; c++) {
+//bloco de código
+}
+
+No laço while, apenas fazemos o teste lógico. A criação da variável e a incrementação é feita em outras partes do código.
+
+int c;
+//criação da variável
+While(c <= 10) {
+//bloco de código
+c++
+//incrementação
+}
+
+No laço do-while, fazemos o teste lógico no final da estrutura.
+
+do {
+//bloco de código
+c++
+//incrementação
+}while(c <= 10)
+
+09)
 
