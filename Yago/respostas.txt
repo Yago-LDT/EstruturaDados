@@ -1,0 +1,71 @@
+01) "Quais são os tipos de dados primitivos em Java? Explique a importância da tipagem forte na linguagem."
+
+Dados primitivos em Java: int, double, float e string
+int c = 1;
+string nome = "Yago";
+Importância da tipagem forte: não aprendi ou não lembro o que é, vou pesquisar
+
+02) "Qual a diferença entre variáveis do tipo primitivo (por exemplo, int, double) e variáveis que referenciam objetos?"
+
+Variáveis primitivas recebem dados simples, de acordo com seu tipo.
+
+int n1 = 5;
+
+Variáveis que referenciam objetos são uma "instância", um método de acesso, à um objeto que permite o acesso e manipulação dos atributos, métodos e funções do objeto.
+Conta = new Conta();
+conta.setNome('Yago');
+
+03) "Como declarar e inicializar variáveis em Java? Dê exemplos u lizando pelo menos dois pos de dados diferentes."
+
+int numero;
+numero = 10;
+
+string nome;
+nome = "Yago";
+
+04) "Quais são os principais operadores aritméticos e lógicos em Java? Mostre um exemplo de expressão que combine ambos."
+
+Operadores aritméticos: 
+(+) - adição/concatenação
+(-) - subtração
+(*) - multiplicação
+(/) - divisão
+(%) - resto de divisão
+
+Operadores lógicos: 
+(>) - maior que
+(>) - menor que
+(||) - ou
+(&&) - e
+(=) - recebe
+(==) - igual
+(===) - exatamente idêntico
+
+Exemplo:
+int c = 1;
+while(c <= 10){
+  System.out.println(c);
+  c = c+1
+  // ou c++, ou c += 1
+}
+
+05) "Qual a diferença entre usar == e o método .equals() para comparar Strings em Java? Por que essa dis nção é importante?"
+
+O (==) compara se o conteúdo das variáveis são iguais. .equals() compara se são idênticos, no tipo, nos caracteres e nos detalhes dos caracteres (maiúsculo, minúsculo, acentuação).
+
+06) "Explique como funciona a estrutura condicional if/else e forneça um exemplo prá co de sua utilização."
+
+Nas estruturas condicionais, é passado uma operação lógica como a condição para executar o bloco de código dentro da estrutura. Caso seja verdadeiro, o bloco de código é executado, caso não seja o programa pula esse bloco de código e executa o bloco de código dentro da estrutura else. 
+
+Exemplo:
+int n1 = 10;
+If(n1 % 2 == 0'){
+  system.out.println("Esse número é par.")
+}else{
+  system.out.println("Esse número é ímpar.")
+}
+
+07) "Como funciona a estrutura switch-case? Em quais situações ela pode ser mais adequada que o uso de múl plos if/else?"
+
+Na estrutura switch/case, se passa uma variável como parâmetro na estrutura do código. 
+
