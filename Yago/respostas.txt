@@ -1,9 +1,13 @@
 01) "Quais são os tipos de dados primitivos em Java? Explique a importância da tipagem forte na linguagem."
 
-Dados primitivos em Java: int, double, float e string
+Dados primitivos em Java:
+
+int, double, float e string
 int c = 1;
 string nome = "Yago";
-Importância da tipagem forte: não aprendi ou não lembro o que é, vou pesquisar
+
+Importância da tipagem forte: 
+A tipagem forte é essencial no Java pra manter a coesão dos dados, estabelecer restrições e regras sobre as variáveis criadas. Dessa forma o código fica mais compreensível e mais robusto, com menos chances de erros principalmente devido a incompatibilidade lógica das variáveis.
 
 02) "Qual a diferença entre variáveis do tipo primitivo (por exemplo, int, double) e variáveis que referenciam objetos?"
 
@@ -124,5 +128,8 @@ c++
 //incrementação
 }while(c <= 10)
 
-09)
+09) "Como declarar um método em Java? Explique o conceito de sobrecarga de métodos
+(overloading) com um exemplo simples."
+
+
 
