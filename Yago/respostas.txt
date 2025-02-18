@@ -382,18 +382,38 @@ public class Papel extends Caneta{ //erro, não pode extender uma classe final
 20)"O que são pacotes em Java e como eles ajudam na organização dos projetos? Explique como
 declarar um pacote e importar classes de outros pacotes."
 
+Pacotes funcionam de maneira muito semelhante à pastas de qualquer explorador de arquivos, e tem os mesmo objetivo: organizar arquivos. 
+Eles estabelecem uma ordem no projeto, determinam uma hierarquia entre si onde um existe dentro do outro ou paralelamente ao outro. Facilita o gerenciamento e a legibilidade do código.
 
+A declaração de um pacote consiste de:
+
+package [nome do pacote]
+
+caso o pacote exista dentro de um diretório de pacotes mais complexos, ou seja é um subpacote, separamos cada pacote por ponto (.)
+
+package [pacote 1].[subpacote 1].[subpacote 2]
+
+Para importar um pacote utilizamos:
+
+import [diretório do pacote, exatamente como no exemplo anterior]
+
+A partir dessa importação temos acesso as classes presentes dentro do pacote importado.
 ------------------------------------------------------------------------------------------------------------------------------
 
 21)"Explique o que é abstração na programação orientada a objetos. Como as classes abstratas e os
 métodos abstratos ajudam a implementar esse conceito em Java? Dê um exemplo simples."
 
+O conceito de abstração é essencialmente de esconder os detalhes da implementação e mostrar apenas os elementos fundamentais de um objeto ou classe. É a forma de focar no que está SENDO feito e ocultar o COMO está sendo feito.
+Traz uma interface e gerenciamento simples do código, sem mostrar o lado interno dos processos.
 
+As classes abstratas e as interfaces em Java ajudam consideravelmente na aplicação desse conceito em sistemas complexos pois permitem a criação e instanciação de métodos abstratos, que não possuem implementação própria e é aplicada nas classes e subclasses que implementam a interface ou herdam da classe que esse método é originado.
 ------------------------------------------------------------------------------------------------------------------------------
 
 22)"Defina e diferencie os relacionamentos entre classes: associação, agregação e composição.
 Apresente um exemplo práƟco (pode ser em pseudocódigo ou Java) que ilustre cada um desses
 relacionamentos."
+
+
 
 ------------------------------------------------------------------------------------------------------------------------------
 
