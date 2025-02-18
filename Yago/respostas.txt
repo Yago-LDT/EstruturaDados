@@ -324,7 +324,13 @@ p1.Escrever();
 17)"Quais são as principais diferenças entre classes abstratas e interfaces? Em que situações cada
 uma é mais indicada?"
 
+As principais diferenças entre classes abstratas e interfaces são:
 
+-Classes abstratas podem ter ou não métodos abstratos (sem lógica), diferente das interfaces que todos os métodos não possuem lógica.
+-Uma classe pode implementar várias interfaces, e o mesmo não é possível com classes abstratas pois uma classe pode herdar de apenas uma classe abstrata.
+-Classes abstratas podem ter métodos construtores, interfaces não.
+
+Usamos classes abstratas quando queremos que as suas sub-classses utilizem código em comum, usamos interfaces quando queremos que as classes que a implementam todas tenham o mesmo "molde" mas não necessariamente utilizem código em comum.
 ------------------------------------------------------------------------------------------------------------------------------
 
 18)"Como a Java lida com exceções? Explique o uso das estruturas try, catch e finally, e a diferença
