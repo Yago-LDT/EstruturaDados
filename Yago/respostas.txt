@@ -336,7 +336,13 @@ Usamos classes abstratas quando queremos que as suas sub-classses utilizem códi
 18)"Como a Java lida com exceções? Explique o uso das estruturas try, catch e finally, e a diferença
 entre exceções verificadas e não verificadas"
 
+O Java trata de erros (exceções) com estruturas de exceção. Uma das principais é a estrutura, try, catch e finally. Onde:
+Try: recebe o código que vai ser executado e pode trazer alguma exceção.
+Catch: recebe o código do que vai ser feito caso o programa receba alguma exceção de um determinado tipo.
+Finally: recebe o código que vai ser executado independentemente de se houve alguma exceção ou não na estrutura.
 
+Exceções verificadas são exceções que o compilador exige que o programador use um estrutura de tratamento para lidar com essas exceções. Normalmente são tipos de exceções que são previstas pelo compilador, como erros de banco de dados.
+Exceções não verificadas são exceções que não são exigidas tratamento pelo compilador e que não são previstas pelo próprio. Como por exemplo erros lógicos do programa.
 ------------------------------------------------------------------------------------------------------------------------------
 
 19)"O que significa a palavra-chave final quando aplicada a variáveis, métodos e classes? Dê
