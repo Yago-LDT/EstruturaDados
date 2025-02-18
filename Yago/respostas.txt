@@ -1,5 +1,6 @@
 01) "Quais são os tipos de dados primitivos em Java? Explique a importância da tipagem forte na linguagem."
 
+
 Dados primitivos em Java:
 
 int, double, float e string
@@ -8,8 +9,10 @@ string nome = "Yago";
 
 Importância da tipagem forte: 
 A tipagem forte é essencial no Java pra manter a coesão dos dados, estabelecer restrições e regras sobre as variáveis criadas. Dessa forma o código fica mais compreensível e mais robusto, com menos chances de erros principalmente devido a incompatibilidade lógica das variáveis.
+------------------------------------------------------------------------------------------------------------------------------
 
 02) "Qual a diferença entre variáveis do tipo primitivo (por exemplo, int, double) e variáveis que referenciam objetos?"
+
 
 Variáveis primitivas recebem dados simples, de acordo com seu tipo.
 
@@ -18,16 +21,20 @@ int n1 = 5;
 Variáveis que referenciam objetos são uma "instância", um método de acesso, à um objeto que permite o acesso e manipulação dos atributos, métodos e funções do objeto.
 Conta = new Conta();
 conta.setNome('Yago');
+------------------------------------------------------------------------------------------------------------------------------
 
 03) "Como declarar e inicializar variáveis em Java? Dê exemplos u lizando pelo menos dois pos de dados diferentes."
+
 
 int numero;
 numero = 10;
 
 string nome;
 nome = "Yago";
+------------------------------------------------------------------------------------------------------------------------------
 
 04) "Quais são os principais operadores aritméticos e lógicos em Java? Mostre um exemplo de expressão que combine ambos."
+
 
 Operadores aritméticos: 
 (+) - adição/concatenação
@@ -52,12 +59,16 @@ while(c <= 10){
   c = c+1
   // ou c++, ou c += 1
 }
+------------------------------------------------------------------------------------------------------------------------------
 
 05) "Qual a diferença entre usar == e o método .equals() para comparar Strings em Java? Por que essa dis nção é importante?"
 
 O (==) compara se o conteúdo das variáveis são iguais. .equals() compara se são idênticos, no tipo, nos caracteres e nos detalhes dos caracteres (maiúsculo, minúsculo, acentuação).
 
+------------------------------------------------------------------------------------------------------------------------------
+
 06) "Explique como funciona a estrutura condicional if/else e forneça um exemplo prá co de sua utilização."
+
 
 Nas estruturas condicionais, é passado uma operação lógica como a condição para executar o bloco de código dentro da estrutura. Caso seja verdadeiro, o bloco de código é executado, caso não seja o programa pula esse bloco de código e executa o bloco de código dentro da estrutura else. 
 
@@ -69,7 +80,10 @@ If(n1 % 2 == 0'){
   system.out.println("Esse número é ímpar.")
 }
 
+------------------------------------------------------------------------------------------------------------------------------
+
 07) "Como funciona a estrutura switch-case? Em quais situações ela pode ser mais adequada que o uso de múl plos if/else?"
+
 
 Na estrutura switch/case, se passa uma variável como parâmetro na estrutura do código. De acordo com o dado específico que foi inserido na variável desse parâmetro, podem ser criados "casos" onde um bloco de código é executado invés de outro. 
 
@@ -102,7 +116,11 @@ break;
 
 É mais adequado do que if/else em situações onde queremos desenvolver código para cada resultado específico, invés de só quando um uma condição é verdadeira ou falsa, dessa forma podemos ser mais específicos com o nosso código e não generalizar.
 
+------------------------------------------------------------------------------------------------------------------------------
+
 08) "Descreva as diferenças entre os laços for, while e do-while, e dê um exemplo de cada um"
+
+
 
 No laço For, inicializamos a variável, fazemos o teste lógico e a incrementação da variável na mesma linha de código.
 
@@ -127,9 +145,236 @@ do {
 c++
 //incrementação
 }while(c <= 10)
+------------------------------------------------------------------------------------------------------------------------------
 
 09) "Como declarar um método em Java? Explique o conceito de sobrecarga de métodos
 (overloading) com um exemplo simples."
+
+
+Declarando um método:
+
+//método para escrever um nome pré definido
+public EscreverNome(){
+System.out.println("Yago");
+}
+
+Sobrecarga de métodos:
+Na sobrecarga de métodos, criamos métodos que são essencialmente o mesmo (cumprem a mesma função) mas de maneiras um pouco diferentes, com validações diferentes e principalmente parâmtros diferentes. Dessa forma, temos mais alternativas no nosso programa para situações diferentes.
+
+public void EscreverNome(String p) {
+System.out.println(p);
+}
+
+public void EscreverNome(String p, String s){
+System.out.println(p + " " + s);
+}
+
+Nesse exemplo temos dois métodos chamados EscreverNome, um recebe apenas o primeiro nome e o outro recebe o primeiro nome e o sobrenome como parâmetro. Os dois têm a mesma função: escrever o nome informado na tela, mas têm parâmetros diferentes e portanto acabam sendo métodos considerados diferentes mesmo tendo o mesmo nome.
+
+------------------------------------------------------------------------------------------------------------------------------
+
+10) "O que é uma classe em Java? Crie um exemplo básico de classe com atributos e métodos, e
+mostre como instanciar um objeto dessa classe."
+
+Uma classe é a estrutura conceitual de um objeto. É composta por atributos, métodos e estado. 
+
+Por exemplo, podemos ter a classe de uma caneta:
+
+public class Caneta {
+  public String marca;
+  public String cor;
+
+  public String Escrever(String e){
+  System.out.println(e)
+  }
+
+}
+
+Para instanciar um objeto:
+
+Caneta c1 = new Caneta();
+
+------------------------------------------------------------------------------------------------------------------------------
+
+11)"O que é encapsulamento e como ele é implementado em Java? Explique o papel dos
+modificadores de acesso (private, public, protected)."
+
+O encapsulamento é uma forma de limitar o acesso aos atributos e métodos de uma classe. Dessa forma garantindo mais segurança, ordenação e padrão para o código. Ele é implementado ao definir os modificadores de acesso de cada atributo e método da classe.
+
+Private faz com que o atributo/método só seja acessível dentro da própria classe que foi declarado.
+Public faz com que o atributo/método seja acessível por todas as classes do projeto.
+Protected faz com que apenas a classe atual e suas sub-classes tenham acesso aos atributos e métodos da classe em que foram declarados.
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+12) "Qual a função de um construtor em uma classe Java? Explique como criar um construtor e por
+que ele é importante na criação de objetos."
+
+Um método construtor em Java é um método que é executado automaticamente na hora que um objeto é instanciado de uma classe. Dessa forma pode-se estabelecer valores padrões para atributos e métodos na criação de todos os objetos. É importante porque ele faz uma automatização valiosa do processo de criação de objetos.
+
+Para criar um método construtor:
+
+public [nome da classe](parametros se houver) {
+//código do que o método construtor vai fazer
+}
+
+usando a classe caneta anterior:
+
+public Caneta (String m, String c) {
+this.marca = "BIC";
+this.cor = "Azul";
+}
+
+com esse método construtor, todo objeto instanciado da classe Caneta automaticamente será da marca BIC e da cor Azul.
+
+------------------------------------------------------------------------------------------------------------------------------
+
+13) "Qual a diferença entre membros (atributos e métodos) estáƟcos e não estáƟcos? Dê um
+exemplo de quando uƟlizar o modificador staƟc."
+
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+14)"Explique o conceito de herança em Java e como uƟlizar a palavra-chave extends para criar uma
+relação de herança entre classes."
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+15)"O que é polimorfismo? Forneça um exemplo simples demonstrando como uma variável de um
+Ɵpo de classe pode referenciar objetos de subclasses."
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+16)"O que são interfaces em Java? Explique como declarar uma interface e como uma classe pode
+implementá-la."
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+17)"Quais são as principais diferenças entre classes abstratas e interfaces? Em que situações cada
+uma é mais indicada?"
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+18)"Como a Java lida com exceções? Explique o uso das estruturas try, catch e finally, e a diferença
+entre exceções verificadas e não verificadas"
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+19)"O que significa a palavra-chave final quando aplicada a variáveis, métodos e classes? Dê
+exemplos de cada caso."
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+20)"O que são pacotes em Java e como eles ajudam na organização dos projetos? Explique como
+declarar um pacote e importar classes de outros pacotes."
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+21)"Explique o que é abstração na programação orientada a objetos. Como as classes abstratas e os
+métodos abstratos ajudam a implementar esse conceito em Java? Dê um exemplo simples."
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+22)"Defina e diferencie os relacionamentos entre classes: associação, agregação e composição.
+Apresente um exemplo práƟco (pode ser em pseudocódigo ou Java) que ilustre cada um desses
+relacionamentos."
+
+------------------------------------------------------------------------------------------------------------------------------
+
+23)"Qual é a finalidade da palavra-chave this em Java? Explique como ela pode ser uƟlizada para
+distinguir atributos de parâmetros em um construtor ou método."
+
+------------------------------------------------------------------------------------------------------------------------------
+
+24)"Como funciona a sobrecarga de construtores em Java? Explique o que é o encadeamento de
+construtores e como uƟlizar a palavra-chave this() para invocar outro construtor na mesma
+classe."
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+25)"Explique o conceito de polimorfismo em Java e como o binding dinâmico (late binding) permite
+que métodos sejam resolvidos em tempo de execução. Forneça um exemplo que demonstre
+esse comportamento."
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+26)"Java não suporta herança múlƟpla de classes. Contudo, como as interfaces podem ser
+uƟlizadas para simular esse recurso? Dê um exemplo de uma classe que implementa duas
+interfaces diferentes."
+
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+27)"Qual a importância da anotação @Override ao sobrescrever métodos em Java? Como ela
+contribui para evitar erros comuns durante a implementação do polimorfismo?"
+
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+28)"O que são interfaces funcionais em Java? Explique como elas se relacionam com expressões
+lambda (lambda expressions) e forneça um exemplo simples de uƟlização, como com a
+interface Runnable ou Comparator."
+
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+29)"O que significa um objeto ser imutável? Quais são as vantagens de se trabalhar com objetos
+imutáveis e como se pode implementar uma classe imutável em Java"
+
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+30)"Explique a diferença fundamental entre uma classe e um objeto em programação orientada a
+objetos. Forneça exemplos para ilustrar como uma classe serve como molde e como objetos
+são instâncias concretas desse molde."
+
+A diferença fundamental de classe e objeto é simplesmente que o objeto é criado a partir da classe e a classe existe para criar objetos, são dois conceitos que andam de mãos dadas são muito semelhantes mas a diferença principal é que um existe a partir do outro.
+
+Seguindo usando a caneta como exemplo:
+// temos a classe Caneta
+
+public class Caneta{
+
+//métodos da caneta
+public String marca;
+  public String cor;
+
+//atributos da caneta
+  public String Escrever(String e){
+  System.out.println(e)
+  }
+
+}
+
+Caneta c1 = new Caneta();
+c1.Escrever("Orientação a Objeto");
+
+// criamos o objeto c1 e usamos um método de Caneta
+
+//podemos criar vários objetos diferentes, mas com a mesma estrutura, pois recebem os mesmos atributos e métodos da classe Caneta
+Caneta c2 = new Caneta();
+c2.Escrever("Segundo objeto");
+
+Caneta c3 = new Caneta();
+c3.Escrever("Terceira caneta");
+------------------------------------------------------------------------------------------------------------------------------
+
+
 
 
 
