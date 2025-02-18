@@ -348,6 +348,34 @@ Exceções não verificadas são exceções que não são exigidas tratamento pe
 19)"O que significa a palavra-chave final quando aplicada a variáveis, métodos e classes? Dê
 exemplos de cada caso."
 
+O comando final é usado para indicar que algo não pode ser alterado após ser definido/inicializado. Isso significa que:
+
+-Em variáveis, após o valor ser atribuido não pode mais ser modificado.
+
+final int x = 5;
+x = 20; //resultará em erro
+
+-Em métodos, após a declarão do método e definição (ou não) da sua lógica, ela não pode mais ser sobrescrita.
+
+//método em superclasse
+final void Escrever(){
+  System.out.println("Escrevendo...");
+}
+//método em sub-classe
+@Override
+void Escrever(){ //Erro, esse método não pode ser sobrescrito
+  //código
+}
+
+-Em classe, define que a classe não pode possuir subclasses, ou seja não pode ser extendida.
+final public class Caneta{
+//código
+}
+
+//outra classe
+public class Papel extends Caneta{ //erro, não pode extender uma classe final
+//código
+}
 
 ------------------------------------------------------------------------------------------------------------------------------
 
