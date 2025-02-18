@@ -304,7 +304,21 @@ caneta vai exibir Conteudo do  texto de c1: Resultado 2
 16)"O que são interfaces em Java? Explique como declarar uma interface e como uma classe pode
 implementá-la."
 
+Interfaces são classes que carregam métodos abstratos, sem lógica/código. Podem ser implementadas por outras classes Java que dessa forma acabam recebendo esses métodos mas devem atribuir a lógica deles.
 
+//Declarando interface
+public interface Caneta {
+  public void Escrever();
+}
+//Implementando em classe
+public class Papel implements Caneta {
+  public void Escrever(){
+  System.out.println("Escrevendo...");
+  }
+}
+//criando objeto da classe Papel e utilizando o método declarado na interface
+Papel p1 = new Papel();
+p1.Escrever();
 ------------------------------------------------------------------------------------------------------------------------------
 
 17)"Quais são as principais diferenças entre classes abstratas e interfaces? Em que situações cada
