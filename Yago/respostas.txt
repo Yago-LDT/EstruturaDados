@@ -232,19 +232,72 @@ com esse método construtor, todo objeto instanciado da classe Caneta automatica
 13) "Qual a diferença entre membros (atributos e métodos) estáƟcos e não estáƟcos? Dê um
 exemplo de quando uƟlizar o modificador staƟc."
 
+As principais diferenças são: membros static de uma classe poddem ser acessados sem precisar da criação de um objeto dessa classe.
+Exemplo:
 
+public static String marca;
+
+//invés de criar um objeto, apenas chamamos Caneta diretamente
+
+Caneta.marca = "BIC"
+
+E a outra diferença é que objetos static tem o seu valor compartilhado por todas as instâncias da classe, porque agora os objetos não criam uma cópia do elemento static para si próprio, o elemento static tem apenas uma versão que é a que está na classe. É muito útil para definir um padrão para um atributo ou método, que não só vai estar de padrão para todas os objetos como vai ter seu valor compartilhado entre todos os objetos.
+
+No exemplo da caneta seria útil por exemplo, para fazer com que todas as canetas forem de uma certa marca e quando essa marca for alterada, todos os objetos tem sua marca alterada.
 
 ------------------------------------------------------------------------------------------------------------------------------
 
-14)"Explique o conceito de herança em Java e como uƟlizar a palavra-chave extends para criar uma
+14)"Explique o conceito de herança em Java e como utilizar a palavra-chave extends para criar uma
 relação de herança entre classes."
 
+O conceito de herança em Java se trata da capacidade de fazermos uma classe, chamada sub-classe, herdar atributos e métodos de outra classe, chamada super-classe ou classe-pai.
+Isso garante a possibilidade de reutilizar códigos de uma mesma super-classe em outras sub-classes e de estabelecer uma ordem hierárquica entre as classes. 
+As sub-classes conseguem acessar e até modificar os membros da sua super-classe dependendo do seu modificador de acesso (privado, protegido, publico).
+
+Como exemplo, podemos usar a classe Caneta e fazer:
+
+//uma sub-classe chamda BIC que extends a classe Caneta, dessa forma tendo todos os seus atributos e métodos
+public class BIC extends Caneta{
+  public BIC(){
+  this.marca = "BIC";
+  }
+}
+
+//com esse código, todos os objetos instanciados da classe BIC já teriam o atributo marca com o valor "BIC".
 
 ------------------------------------------------------------------------------------------------------------------------------
 
 15)"O que é polimorfismo? Forneça um exemplo simples demonstrando como uma variável de um
-Ɵpo de classe pode referenciar objetos de subclasses."
+tipo de classe pode referenciar objetos de subclasses."
 
+O polimorfismo garante mais flexibilidade e reutilização no código do programa. Através dele podemos fazer com que objetos diferentes sejam tratados da mesma forma mas trazerem resultados/comportamentos diferentes. Isso é feito através da sobrecarga e da sobrescrita de atributos e métodos.
+
+Por exemplo com o nosso exemplo anterior da classe Caneta e sua sub-classe BIC: 
+
+class Caneta{
+
+public void Escrever(String e){
+System.out.println("Conteudo do texto de Caneta: " + p);
+  }
+}
+
+class BIC extends Caneta{
+
+public void Escrever(String e){
+System.out.println("Conteudo do texto de BIC: " + p);
+  }
+}
+
+Caneta c1 = new Caneta();
+BIC caneta = new BIC();
+
+c1.Escrever("Resultado 1");
+caneta.Escrever("Resultado 2");
+
+Temos dois objetos de diferentes classes, que chamam o mesmo método, que recebe o mesmo tipo de parâmetro, mas com o poliformismo com sobrescrita cada método vai ter um comportamento diferente:
+
+c1 vai exibiir Conteudo do texto de Caneta: Resultado 1
+caneta vai exibir Conteudo do  texto de c1: Resultado 2
 
 ------------------------------------------------------------------------------------------------------------------------------
 
@@ -292,6 +345,10 @@ relacionamentos."
 
 23)"Qual é a finalidade da palavra-chave this em Java? Explique como ela pode ser uƟlizada para
 distinguir atributos de parâmetros em um construtor ou método."
+
+A palavra this no POO para Java, é um indicador de auto-referência. O objeto que instanciar essa classe e utililzar o método/atributo que possui a palavra chave this, vai referir a si mesmo no lugar de this. 
+
+Em um construtor ou método, this só funciona quando seguido por um .[nome de atributo].
 
 ------------------------------------------------------------------------------------------------------------------------------
 
