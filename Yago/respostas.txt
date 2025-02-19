@@ -410,10 +410,14 @@ As classes abstratas e as interfaces em Java ajudam consideravelmente na aplica�
 ------------------------------------------------------------------------------------------------------------------------------
 
 22)"Defina e diferencie os relacionamentos entre classes: associação, agregação e composição.
-Apresente um exemplo práƟco (pode ser em pseudocódigo ou Java) que ilustre cada um desses
+Apresente um exemplo prático (pode ser em pseudocódigo ou Java) que ilustre cada um desses
 relacionamentos."
 
+Associação: Uma conexão entre objetos de classes diferentes. Pode ser unilateral, onde uma classe conhece a outra mas a outra classe não conhece a primeira, ou bilateral onde as duas classes se conhecem e podem acessar os métodos uma da outra.
 
+Agregação: Uma classe contem outra, mas a classe "menor" pode existir independente da outra classe. Se a primeira classe for removida a segunda continua existindo.
+
+Composição: É como a agregação, porém se a classe "maior" for destruída todas as outras classes "menores" também deixam de existir. 
 
 ------------------------------------------------------------------------------------------------------------------------------
 
@@ -452,6 +456,9 @@ interfaces diferentes."
 contribui para evitar erros comuns durante a implementação do polimorfismo?"
 
 
+É importante pois ela primeiramente deixa o código mais legível, o programador sabe exatamente onde está sendo feita a sobrescrita de um método.
+Além disso, faz com que o compilador verifique se o método que é escrito em seguida realmente está sobrescrevendo um método da superclasse ou da interface 
+da classe que está criando a implementação do método. Sem essa verificação fica muito mais fácil de haver um erro de lógica nessa sobrescrita.
 
 ------------------------------------------------------------------------------------------------------------------------------
 
@@ -467,6 +474,8 @@ interface Runnable ou Comparator."
 imutáveis e como se pode implementar uma classe imutável em Java"
 
 
+Um objeto imutável seria um objeto que é declarado como final, todos os seus atributos também são declarados como final e não possui nenhum método setter. 
+Os principais benefícios são a segurança e a simplicidade do código.
 
 ------------------------------------------------------------------------------------------------------------------------------
 
