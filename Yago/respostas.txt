@@ -270,7 +270,9 @@ public class BIC extends Caneta{
 15)"O que é polimorfismo? Forneça um exemplo simples demonstrando como uma variável de um
 tipo de classe pode referenciar objetos de subclasses."
 
-O polimorfismo garante mais flexibilidade e reutilização no código do programa. Através dele podemos fazer com que objetos diferentes sejam tratados da mesma forma mas trazerem resultados/comportamentos diferentes. Isso é feito através da sobrecarga e da sobrescrita de atributos e métodos.
+O polimorfismo garante mais flexibilidade e reutilização no código do programa.
+Através dele podemos fazer com que objetos diferentes sejam tratados da mesma forma mas trazerem resultados/comportamentos diferentes.
+Isso é feito através da sobrecarga e da sobrescrita de atributos e métodos.
 
 Por exemplo com o nosso exemplo anterior da classe Caneta e sua sub-classe BIC: 
 
@@ -294,10 +296,19 @@ BIC caneta = new BIC();
 c1.Escrever("Resultado 1");
 caneta.Escrever("Resultado 2");
 
-Temos dois objetos de diferentes classes, que chamam o mesmo método, que recebe o mesmo tipo de parâmetro, mas com o poliformismo com sobrescrita cada método vai ter um comportamento diferente:
+Temos dois objetos de diferentes classes, que chamam o mesmo método, que recebe o mesmo tipo de parâmetro, mas com o poliformismo com 
+sobrescrita cada método vai ter um comportamento diferente:
 
-c1 vai exibiir Conteudo do texto de Caneta: Resultado 1
-caneta vai exibir Conteudo do  texto de c1: Resultado 2
+c1 vai exibiir
+Conteudo do texto de Caneta: Resultado 1
+caneta vai exibir
+Conteudo do  texto de BIC: Resultado 2
+
+Os dois chamam o mesmo método, recebem o mesmo tipo de parâmetro e são parâmetros com valores diferentes, porém o foco aqui é no texto
+impresso:
+o objeto de c1 diz "texto de Caneta(que é o nome da classe Caneta)"
+o objeto de BIC diz "texto de BIC(que é o nome da classe BIC)"
+
 
 ------------------------------------------------------------------------------------------------------------------------------
 
